@@ -14,7 +14,7 @@ git clone git@github.com:cednore/dotfiles.git
 # Go inside repo folder
 cd dotfiles
 
-# Bio-directional rsync between the repo and home folder
+# Bi-directional rsync between the repo and home folder
 ./sync.sh # This will output git status at the end
 
 # Forcibly sync
