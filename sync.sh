@@ -19,4 +19,3 @@ else
     doBiodirectionalRsync;
   fi;
 fi;
-unset doBiodirectionalRsync;
