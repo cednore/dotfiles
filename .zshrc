@@ -75,3 +75,7 @@ alias ofd='xdg-open .'
 # qr
 alias qr='qrencode -m 2 -t utf8 <<< "$1"'
 function qr2clip { qrencode $1 -o - | xclip -selection clipboard -t image/png }
+
+# flyctl
+export FLYCTL_INSTALL="$HOME/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
