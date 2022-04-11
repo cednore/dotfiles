@@ -20,3 +20,5 @@ cd dotfiles
 # Forcibly sync
 ./sync.sh --force # This will output git status at the end
 ```
+
+> Inspired from https://github.com/mathiasbynens/dotfiles
