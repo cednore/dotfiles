@@ -63,6 +63,9 @@ if command -v rbenv &> /dev/null; then
   eval "$(rbenv init -)"
 fi
 
+# awscliv2
+alias aws=awscliv2
+
 # terraform
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
