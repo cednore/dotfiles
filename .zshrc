@@ -85,4 +85,10 @@ alias ofd='xdg-open .'
 # qr
 alias qr='qrencode -m 2 -t utf8 <<< "$1"'
 function qr2clip { qrencode $1 -o - | xclip -selection clipboard -t image/png }
+alias q2c='qr2clip'
 alias qrfrmclip='xclip -selection clipboard -t image/png -o | zbarimg -'
+alias qfc='qrfrmclip'
+
+# clipboard
+alias printpngclip='xclip -selection clipboard -t image/png -o'
+alias ppc='printpngclip'
