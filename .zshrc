@@ -35,7 +35,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # linuxbrew
-if [ -a "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+if [ -s "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
