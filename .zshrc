@@ -103,8 +103,3 @@ alias qfc='qrfrmclip'
 # clipboard
 alias printpngclip='xclip -selection clipboard -t image/png -o'
 alias ppc='printpngclip'
-
-# skip browser binary downloads
-PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
-CYPRESS_INSTALL_BINARY=0
