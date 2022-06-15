@@ -57,6 +57,7 @@ fi
 
 # composer
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+export COMPOSER_PROCESS_TIMEOUT=0
 
 # go
 if command -v go &> /dev/null; then
