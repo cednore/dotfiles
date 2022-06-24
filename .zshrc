@@ -34,77 +34,9 @@ source $ZSH/oh-my-zsh.sh
 # powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# linuxbrew
-if [ -s "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# deno
-export DENO_INSTALL="$HOME/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-
-# phpenv
-export PHPENV_ROOT="$HOME/.phpenv"
-if [ -d "${PHPENV_ROOT}" ]; then
-  export PATH="${PHPENV_ROOT}/bin:${PATH}"
-  eval "$(phpenv init -)"
-fi
-
-# composer
-export PATH="$HOME/.config/composer/vendor/bin:$PATH"
-export COMPOSER_PROCESS_TIMEOUT=0
-
-# go
-if command -v go &> /dev/null; then
-  export PATH="$(go env GOPATH)/bin:$PATH"
-fi
-
-# python
-alias python=/usr/bin/python3
-export PATH="$HOME/.local/bin:$PATH"
-
-# rbenv
-if command -v rbenv &> /dev/null; then
-  eval "$(rbenv init -)"
-fi
-
-# awscliv2
-alias aws=awscliv2
-
-# terraform
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/terraform terraform
-
-# flyctl
-export FLYCTL_INSTALL="$HOME/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
-
-# tinker
-function tinker () {
-  if [ -z "$1" ]; then
-    php artisan tinker
-  else
-    php artisan tinker --execute="dd($1);"
-  fi
-}
-
-# osx simulation
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
-alias ofd='xdg-open .'
-
-# qr
-alias qr='qrencode -m 2 -t utf8 <<< "$1"'
-function qr2clip { qrencode $1 -o - | xclip -selection clipboard -t image/png }
-alias q2c='qr2clip'
-alias qrfrmclip='xclip -selection clipboard -t image/png -o | zbarimg -'
-alias qfc='qrfrmclip'
-
-# clipboard
-alias printpngclip='xclip -selection clipboard -t image/png -o'
-alias ppc='printpngclip'
+# Load ~/.extra, ~/.exports, ~/.aliases and ~/.functions
+# ~/.extra can be used for settings you don’t want to commit
+for file in ~/.{extra,exports,aliases,functions}; do
+	[ -r "$file" ] && source "$file"
+done
+unset file

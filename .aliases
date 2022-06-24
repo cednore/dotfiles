@@ -1,0 +1,55 @@
+# navigation
+alias ~="cd ~"
+
+# shortcuts
+alias h="history"
+alias j="jobs"
+alias ws="cd ~/workspaces"
+alias sb="cd ~/sandbox"
+
+# apps
+alias chrome="/usr/bin/google-chrome-stable"
+alias ms="mailspring"
+
+# be nice
+alias please=sudo
+
+# stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# git root
+alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
+
+# ip addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# enhanced WHOIS lookups
+alias whois="whois -h whois-servers.net"
+
+# view HTTP traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# file size
+alias fs="stat -f \"%z bytes\""
+
+# awscliv2
+alias aws=awscliv2
+
+# osx simulation
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+alias ofd='xdg-open .'
+
+# qr
+alias qr='qrencode -m 2 -t utf8 <<< "$1"'
+function qr2clip { qrencode $1 -o - | xclip -selection clipboard -t image/png }
+alias q2c='qr2clip'
+alias qrfrmclip='xclip -selection clipboard -t image/png -o | zbarimg -'
+alias qfc='qrfrmclip'
+
+# clipboard
+alias printpngclip='xclip -selection clipboard -t image/png -o'
+alias ppc='printpngclip'
