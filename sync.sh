@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 function doBiodirectionalRsync() {
-  rsync --files-from=<(find . -type f ! -path "./.git/*" ! -path "./LICENSE" ! -path "./README.md" ! -path "./sync.sh") -auvh --no-perms . ~;
-  rsync --files-from=<(find . -type f ! -path "./.git/*" ! -path "./LICENSE" ! -path "./README.md" ! -path "./sync.sh") -auvh --no-perms ~ .;
+  rsync --files-from=<(find . -type f ! -path "./.git/*" ! -path "./LICENSE" ! -path "./README.md" ! -path "./sync.sh" ! -path "./.extra") -auvh --no-perms . ~;
+  rsync --files-from=<(find . -type f ! -path "./.git/*" ! -path "./LICENSE" ! -path "./README.md" ! -path "./sync.sh" ! -path "./.extra") -auvh --no-perms ~ .;
   echo "";
   echo "";
   echo "git status --porcelain";
