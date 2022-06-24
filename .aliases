@@ -4,7 +4,7 @@ alias ~="cd ~"
 # shortcuts
 alias h="history"
 alias j="jobs"
-alias ws="cd ~/workspaces"
+alias ws="cd ~/workspace"
 alias sb="cd ~/sandbox"
 
 # apps
