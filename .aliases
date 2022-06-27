@@ -14,9 +14,6 @@ alias ms="mailspring"
 # be nice
 alias please=sudo
 
-# stopwatch
-alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
-
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
