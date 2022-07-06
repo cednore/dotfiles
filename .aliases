@@ -38,6 +38,9 @@ alias fs="stat -f \"%z bytes\""
 # awscliv2
 alias aws=awscliv2
 
+# terraform
+alias tf=terraform
+
 # osx simulation
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
