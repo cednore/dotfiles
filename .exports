@@ -49,7 +49,7 @@ if command -v rbenv &> /dev/null; then
 fi
 
 # terraform
-autoload -U +X bashcompinit && bashcompinit
+[[ ! -z "$ZSH_NAME" ]] && autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
 # flyctl
