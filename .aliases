@@ -40,6 +40,7 @@ alias aws=awscliv2
 
 # terraform
 alias tf=terraform
+alias tfg=terragrunt
 
 # osx simulation
 alias pbcopy='xclip -selection clipboard'
