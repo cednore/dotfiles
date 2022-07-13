@@ -6,3 +6,8 @@ function tinker () {
     php artisan tinker --execute="dd($1);"
   fi
 }
+
+# redate last commit
+function redate () {
+  GIT_COMMITTER_DATE="$1" git commit --amend --no-edit --date $1
+}
