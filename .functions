@@ -11,3 +11,9 @@ function tinker () {
 function redate () {
   GIT_COMMITTER_DATE="$1" git commit --amend --no-edit --date $1
 }
+
+# Zip all `.env` files inside given directory
+function envzip () {
+  find $1 -type f -iname ".env" | zip archive -@
+  mv archive.zip ${2:-.env.zip}
+}
