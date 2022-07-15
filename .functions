@@ -15,5 +15,5 @@ function redate () {
 # Zip all `.env` files inside given directory
 function envzip () {
   find ${1:-.} -type f -iname ".env" | zip archive -@
-  mv archive.zip ${2:-.env.zip}
+  mv archive.zip ${2:-dotenvs.zip}
 }
