@@ -2,6 +2,14 @@
 
 > My personal dotfiles
 
+## Prerequisites
+
+1. [`git-restore-mtime`](https://github.com/MestreLion/git-tools)
+
+```bash
+sudo apt install git-restore-mtime
+```
+
 ## Clone and configure
 
 ```bash

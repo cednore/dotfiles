@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 function doBiodirectionalRsync() {
+  git restore-mtime --test
   rsync --files-from=<(find . -type f ! -path "./.git/*" ! -path "./LICENSE" ! -path "./README.md" ! -path "./sync.sh" ! -path "./.extra") -auvh --no-perms . ~;
   rsync --files-from=<(find . -type f ! -path "./.git/*" ! -path "./LICENSE" ! -path "./README.md" ! -path "./sync.sh" ! -path "./.extra") -auvh --no-perms ~ .;
   echo "";
