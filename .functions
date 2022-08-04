@@ -21,10 +21,10 @@ function envzip () {
 # Output fortune every 10 seconds
 function fortunes () {
   echo "----------------------------------FORTUNE---------------------------------------";
-  fortune;
+  fortune -w;
 
-  while sleep 10;
+  while sleep 0;
     echo "----------------------------------FORTUNE---------------------------------------";
-    do fortune;
+    do fortune -w;
   done
 }
