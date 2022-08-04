@@ -4,6 +4,7 @@ alias ~="cd ~"
 # shortcuts
 alias h="history"
 alias j="jobs"
+alias t="todo.sh"
 alias ws="cd ~/workspace"
 alias sb="cd ~/sandbox"
 
