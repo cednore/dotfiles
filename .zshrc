@@ -38,4 +38,4 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.profile ]] || source ~/.profile
 
 # Init vscode shell integration
-[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path bash)"
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
