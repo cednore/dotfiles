@@ -58,3 +58,6 @@ alias qfc='qrfrmclip'
 # clipboard
 alias printpngclip='xclip -selection clipboard -t image/png -o'
 alias ppc='printpngclip'
+
+# sublime merge
+alias sm='/opt/sublime_merge/sublime_merge'
