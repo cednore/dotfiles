@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function doSync() {
-  rsync --files-from=<(find . -type f ! -path "./.git/*" ! -path "./LICENSE" ! -path "./README.md" ! -path "./sync.sh" ! -path "./.extra") -avh --no-perms . ~;
+  rsync --files-from=<(find . -type f ! -path "./.git/*" ! -path "./.gitignore" ! -path "./LICENSE" ! -path "./README.md" ! -path "./sync.sh") -avh --no-perms . ~;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
