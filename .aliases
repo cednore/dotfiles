@@ -21,12 +21,12 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="hostname -I"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
-# enhanced WHOIS lookups
+# enhanced whois lookups
 alias whois="whois -h whois-servers.net"
 
-# view HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+# view http traffic
+alias sniff="sudo ngrep -d 'tun0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i tun0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # flush DNS cache
 alias dns_flush="sudo systemd-resolve --flush-caches"
