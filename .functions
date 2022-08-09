@@ -1,3 +1,6 @@
+# generate qr and push to clipboard
+function qr2clip { qrencode $1 -o - | xclip -selection clipboard -t image/png; }
+
 # tinker
 function tinker () {
   if [ -z "$1" ]; then
@@ -12,13 +15,13 @@ function redate () {
   GIT_COMMITTER_DATE="$1" git commit --amend --no-edit --date $1
 }
 
-# Zip all `.env` files inside given directory
+# zip all `.env` files inside given directory
 function envzip () {
   find ${1:-.} -type f -iname ".env" | zip archive -@
   mv archive.zip ${2:-dotenvs.zip}
 }
 
-# Output fortune every 10 seconds
+# output fortune every 10 seconds
 function fortunes () {
   echo "----------------------------------FORTUNE---------------------------------------";
   fortune -w;

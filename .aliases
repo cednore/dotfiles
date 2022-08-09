@@ -11,16 +11,14 @@ alias sb="cd ~/sandbox"
 # apps
 alias chrome="/usr/bin/google-chrome-stable"
 alias ms="mailspring"
+alias sm='/opt/sublime_merge/sublime_merge'
 
 # be nice
 alias please=sudo
 
-# git root
-alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
-
 # ip addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
+alias localip="hostname -I"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # enhanced WHOIS lookups
@@ -41,7 +39,7 @@ alias aws=awscliv2
 
 # terraform
 alias tf=terraform
-alias tfg=terragrunt
+alias tg=terragrunt
 
 # osx simulation
 alias pbcopy='xclip -selection clipboard'
@@ -50,7 +48,6 @@ alias ofd='xdg-open .'
 
 # qr
 alias qr='qrencode -m 2 -t utf8 <<< "$1"'
-function qr2clip { qrencode $1 -o - | xclip -selection clipboard -t image/png; }
 alias q2c='qr2clip'
 alias qrfrmclip='xclip -selection clipboard -t image/png -o | zbarimg -'
 alias qfc='qrfrmclip'
@@ -58,6 +55,3 @@ alias qfc='qrfrmclip'
 # clipboard
 alias printpngclip='xclip -selection clipboard -t image/png -o'
 alias ppc='printpngclip'
-
-# sublime merge
-alias sm='/opt/sublime_merge/sublime_merge'
