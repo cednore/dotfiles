@@ -14,11 +14,11 @@ git clone git@github.com:cednore/dotfiles.git
 # Go inside repo folder
 cd dotfiles
 
-# Sync files from repo to home folder via rsync
-./sync.sh
+# Setup symlinks for dotfiles
+./setup
 
-# Forcibly sync
-./sync.sh --force
+# Forcibly setup symlinks
+./setup --force
 ```
 
 > Inspired from https://github.com/mathiasbynens/dotfiles
