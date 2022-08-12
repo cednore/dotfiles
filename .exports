@@ -35,8 +35,9 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export COMPOSER_PROCESS_TIMEOUT=0
 
 # go
+export GOPATH=$(go env GOPATH)
 if command -v go &> /dev/null; then
-  export PATH="$(go env GOPATH)/bin:$PATH"
+  export PATH="$GOPATH/bin:$PATH"
 fi
 
 # cargo
