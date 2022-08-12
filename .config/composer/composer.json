@@ -1,0 +1,5 @@
+{
+    "require": {
+        "tightenco/takeout": "^2.1"
+    }
+}
