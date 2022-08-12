@@ -77,6 +77,10 @@ only after I have placed the correct symlinks.)
 - [**cednore/etc**](https://github.com/cednore/etc) (^private) keeps my `/etc` directory via
   [**etckeeper**](https://etckeeper.branchable.com/)
 
+## 👋 Contributions
+
+Contributions are welcome by opening issues and pull requests.
+
 ## 🚧 Roadmap
 
 - [ ] Ways other people can experience my dotfiles at ease
@@ -84,6 +88,10 @@ only after I have placed the correct symlinks.)
   - https://dotfiles.github.io/utilities/
 - [ ] More dotfiles to be public
   - [ ] npm; global `package.json` file
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
 
 ## 🙇 Credits
 
