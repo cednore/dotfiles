@@ -19,15 +19,19 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 # HIST_STAMPS="mm/dd/yyyy"
 plugins=(
-  git
   zsh-autosuggestions
-  ubuntu
-  sublime
+  git
+  docker
+  docker-compose
+  npm
+  yarn
+  composer
   laravel
   artisan
-  docker-compose
+  ubuntu
+  taskwarrior
   emoji
-  npm
+  sublime
 )
 source $ZSH/oh-my-zsh.sh
 
