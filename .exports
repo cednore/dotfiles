@@ -1,0 +1,65 @@
+# make nvim the default editor
+# export EDITOR="nvim"
+
+# personal vars
+export WORKSPACE_ROOT="$HOME/workspace"
+export SANDBOX_ROOT="$HOME/sandbox"
+export HOME_ROOT="$WORKSPACE_ROOT/cednore/home"
+
+# don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# linuxbrew
+if [ -s "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# deno
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+# phpenv
+export PHPENV_ROOT="$HOME/.phpenv"
+if [ -d "${PHPENV_ROOT}" ]; then
+  export PATH="${PHPENV_ROOT}/bin:${PATH}"
+  eval "$(phpenv init -)"
+fi
+
+# composer
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+export COMPOSER_PROCESS_TIMEOUT=0
+
+# go
+if command -v go &> /dev/null; then
+  export PATH="$(go env GOPATH)/bin:$PATH"
+fi
+
+# cargo
+if [ -d "$HOME/.cargo" ]; then
+  . "$HOME/.cargo/env"
+fi
+
+# python
+alias python=/usr/bin/python3
+export PATH="$HOME/.local/bin:$PATH"
+
+# rbenv
+if command -v rbenv &> /dev/null; then
+  eval "$(rbenv init -)"
+fi
+
+# terraform
+[[ ! -z "$ZSH_NAME" ]] && autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+# flyctl
+export FLYCTL_INSTALL="$HOME/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+# solana
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"

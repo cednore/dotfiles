@@ -1,0 +1,54 @@
+# navigation
+alias ~="cd ~"
+
+# shortcuts
+alias h="history"
+alias j="jobs"
+alias t="task"
+alias ws="cd ~/workspace"
+alias sb="cd ~/sandbox"
+
+# apps
+alias chrome="/usr/bin/google-chrome-stable"
+alias ms="mailspring"
+alias sm='/opt/sublime_merge/sublime_merge'
+
+# be nice
+alias please=sudo
+
+# ip addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="hostname -I"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# view http/https traffic
+alias sniff="sudo ngrep -d 'tun0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias sniffs="sudo ngrep -d 'tun0' -t '^(GET|POST) ' 'tcp and port 443'"
+
+# flush DNS cache
+alias dns_flush="sudo systemd-resolve --flush-caches"
+
+# file size
+alias fs="stat -f \"%z bytes\""
+
+# awscliv2
+alias aws=awscliv2
+
+# terraform
+alias tf=terraform
+alias tg=terragrunt
+
+# osx simulation
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+alias ofd='xdg-open .'
+
+# qr
+alias qr='qrencode -m 2 -t utf8 <<< "$1"'
+alias q2c='qr2clip'
+alias qrfrmclip='xclip -selection clipboard -t image/png -o | zbarimg -'
+alias qfc='qrfrmclip'
+
+# clipboard
+alias printpngclip='xclip -selection clipboard -t image/png -o'
+alias ppc='printpngclip'
