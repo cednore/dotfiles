@@ -5,6 +5,7 @@ alias ~="cd ~"
 alias h="history"
 alias j="jobs"
 alias t="task"
+alias q="exit"
 alias ws="cd ~/workspace"
 alias sb="cd ~/sandbox"
 
