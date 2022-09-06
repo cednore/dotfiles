@@ -22,6 +22,9 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="hostname -I"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
+# ping
+alias p8="ping 8.8.8.8"
+
 # view http/https traffic
 alias sniff="sudo ngrep -d 'tun0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias sniffs="sudo ngrep -d 'tun0' -t '^(GET|POST) ' 'tcp and port 443'"
