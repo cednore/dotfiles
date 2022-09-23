@@ -2,17 +2,18 @@
 alias ~="cd ~"
 
 # shortcuts
-alias h="history"
-alias j="jobs"
-alias t="task"
-alias q="exit"
+alias h=history
+alias j=jobs
+alias t=task
+alias q=exit
 alias ws="cd ~/workspace"
 alias sb="cd ~/sandbox"
 
 # apps
-alias chrome="/usr/bin/google-chrome-stable"
-alias ms="mailspring"
-alias sm='/opt/sublime_merge/sublime_merge'
+alias chrome="gtk-launch google-chrome &>/dev/null"
+alias ms="gtk-launch Mailspring &>/dev/null"
+alias tr="gtk-launch trilium &>/dev/null"
+alias sm="/opt/sublime_merge/sublime_merge"
 
 # be nice
 alias please=sudo
@@ -35,24 +36,26 @@ alias dns_flush="sudo systemd-resolve --flush-caches"
 # file size
 alias fs="stat -f \"%z bytes\""
 
-# awscliv2
-alias aws=awscliv2
-
-# terraform
-alias tf=terraform
+# terraform & terragrunt
+alias tffr="terraform fmt -recursive"
 alias tg=terragrunt
+alias tgf="terragrunt hclfmt"
+alias tgfr="terragrunt hclfmt"
 
 # osx simulation
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
-alias ofd='xdg-open .'
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
+alias ofd="xdg-open ."
 
 # qr
-alias qr='qrencode -m 2 -t utf8 <<< "$1"'
-alias q2c='qr2clip'
-alias qrfrmclip='xclip -selection clipboard -t image/png -o | zbarimg -'
-alias qfc='qrfrmclip'
+alias qr="qrencode -m 2 -t utf8 <<< '$1'"
+alias q2c=qr2clip
+alias qrfrmclip="xclip -selection clipboard -t image/png -o | zbarimg -"
+alias qfc=qrfrmclip
 
 # clipboard
-alias printpngclip='xclip -selection clipboard -t image/png -o'
-alias ppc='printpngclip'
+alias printpngclip="xclip -selection clipboard -t image/png -o"
+alias ppc=printpngclip
+
+# nautilus
+alias cmru="rm ~/.local/share/recently-used.xbel"

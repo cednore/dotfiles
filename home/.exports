@@ -4,7 +4,7 @@
 # personal vars
 export WORKSPACE_ROOT="$HOME/workspace"
 export SANDBOX_ROOT="$HOME/sandbox"
-export HOME_ROOT="$WORKSPACE_ROOT/cednore/home"
+export HOMEREPO_ROOT="$WORKSPACE_ROOT/cednore/home"
 
 # don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
