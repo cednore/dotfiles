@@ -5,4 +5,4 @@
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path bash)"
 
 # customize history file path
-export HISTFILE="$HOME_ROOT/.history/.bash_history"
+export HISTFILE="$HOMEREPO_ROOT/.history/.bash_history"

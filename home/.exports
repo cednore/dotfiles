@@ -9,6 +9,9 @@ export HOMEREPO_ROOT="$WORKSPACE_ROOT/cednore/home"
 # don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
+# brew
+export HOMEBREW_NO_INSTALL_CLEANUP="true"
+
 # linuxbrew
 if [ -s "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
