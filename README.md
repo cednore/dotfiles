@@ -87,7 +87,6 @@ Contributions are welcome by opening issues and pull requests.
 - [ ] Learn new stuffs from dotfiles community and adapt something new
   - https://dotfiles.github.io/utilities/
 - [ ] More dotfiles to be public
-  - [ ] npm; global `package.json` file
 
 ## 📄 License
 
