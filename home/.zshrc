@@ -33,6 +33,9 @@ plugins=(
   taskwarrior
   emoji
   sublime
+  kubectl
+  minikube
+  microk8s
 )
 source $ZSH/oh-my-zsh.sh
 

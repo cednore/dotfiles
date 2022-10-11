@@ -42,6 +42,12 @@ alias tg=terragrunt
 alias tgf="terragrunt hclfmt"
 alias tgfr="terragrunt hclfmt"
 
+# just
+alias js="just"
+
+# minikube
+alias mk="minikube"
+
 # osx simulation
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
