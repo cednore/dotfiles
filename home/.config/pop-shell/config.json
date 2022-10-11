@@ -1,0 +1,20 @@
+{
+  "float": [
+    {
+      "class": "pop-shell-example",
+      "title": "pop-shell-example"
+    },
+    {
+      "class": "Trilium Notes"
+    },
+    {
+      "class": "Skype"
+    },
+    {
+      "class": "Gnome-system-monitor"
+    }
+  ],
+  "skiptaskbarhidden": [],
+  "log_on_focus": false,
+  "default_pointer_position": "TOP_LEFT"
+}
